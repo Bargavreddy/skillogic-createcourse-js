@@ -1,0 +1,17 @@
+{
+  "name": "text",
+  "description": "sometext",
+  "main": "exampl",
+  "authors": [
+    "bhargav"
+  ],
+  "license": "MIT",
+  "homepage": "index",
+  "ignore": [
+    "**/.*",
+    "node_modules",r
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

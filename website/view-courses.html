@@ -1,0 +1,546 @@
+
+<style>
+.navbar-brand.navbar-brand-logo img{
+    width: 170px !important;
+}
+.paper-shadow[data-z="0.5"]:after, .paper-shadow[data-hover-z="0.5"]:hover:after{
+    box-shadow: none !important;
+}
+    </style>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand navbar-brand-logo">
+          <a  ui-sref="#"><img src="images/skillogic_logo.png" width="170"></a>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-nav">
+     <div class="navbar-right">
+        <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
+          <!-- user -->
+          <li class="dropdown user">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li ui-sref-active="active"><a ui-sref="website-student.dashboard"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.courses"><i class="fa fa-mortar-board"></i> My Courses</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.private-profile"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a ui-sref="login"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </li>
+          <!-- // END user -->
+        </ul>
+        <a ui-sref="login" class="navbar-btn btn btn-primary">Log In</a>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+
+  </div>
+</div>
+
+
+<div class="container" id="listofcourses">
+
+  <div class="page-section">
+    <div class="row courses-list course_list_page">
+    <h4  align-userlist style="margin-left:38px;font-size:20px;float:left;width:47%;margin-top:23px;">Courses (120) </h4>
+        <div class="media-right">
+              <div class="form-group form-control-material static required form-control-width">
+                  <input type="text" name="title" id="title" placeholder="Search" class="form-control used"/><i class="fa fa-fw fa-search search-people"></i>
+                  
+                  <!--<label for="title" >Enter Topic Name</label>-->
+                </div>
+            </div>
+        
+      <div class="col-md-9">
+
+        <!-- Tabbable Widget -->
+        <div class="tabbable paper-shadow relative" data-z="0.5">
+
+          <!-- Panes -->
+<div class="tab-content" style="background:none;">
+
+<div id="billing" class="tab-pane active">
+    <form action="#" class="form-horizontal">
+                
+    <div class="panel panel-default paper-shadow shadow-course-details" data-z="0.5">
+          <div class="panel-body">
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                    <span class="v-center">
+                        <i class="fa fa-github"></i>
+                    </span>
+                  </span>
+                  <a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+        <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                  <li><a ui-sref="website-assign-user">Assign user</a></li>
+                  <li><a href="#">View Detail</a></li>
+                  <li><a href="#">Edit</a></li>
+                  <li><a data-toggle="modal" href="#block-course-view-course">Block Course</a></li>
+                  
+              </ul>
+            </div>
+                  
+                  
+                  <h4 class="text-headline margin-v-5-0"><a ui-sref="website-course_detail_page">JavaScript</a></h4><span class="course-block">Course Blocked </span>
+                  
+                  <div class="col-lg-3 col-sm-3 watchinnerwrapper hourstraining paddlr0 lesson-hours" >
+                        <label><span class="lesson-hours-label">(10) </span>  Hours</label>
+                    </div>
+                 
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 course-detail">
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 Trng_category">
+                        <small class="title">Category</small>
+                        <label> Public </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 exp-date-on">
+                        <small class="title">Created On</small>
+                        <label> 02-09-2016 </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt">
+                        <a  ui-sref=""> <small class="title">Registrations</small></a>
+                        <label>  20  </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num">
+                        <small class="title">No.of Lessons</small>
+                        <label>  20  </label>
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+
+          </div>
+        </div>
+                
+    <div class="panel panel-default paper-shadow shadow-course-details" data-z="0.5">
+          <div class="panel-body">
+
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                        
+                  </span>
+                  <!--<a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>-->
+                </div>
+              </div>
+              <div class="media-body">
+                  <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                  <li><a ui-sref="website-assign-user">Assign user</a></li>
+                  <li><a href="#">View Detail</a></li>
+                  <li><a href="#">Edit</a></li>
+                  <li><a data-toggle="modal" href="#block-course-view-course">Block Course</a></li>
+              </ul>
+            </div>
+                  
+                <h4 class="text-headline margin-v-5-0"><a ui-sref="website-courses.single">AngularJS</a></h4>
+                  
+                  <div class="col-lg-3 watchinnerwrapper hourstraining paddlr0" style="cursor:pointer;padding-left:0px;padding-top:8px;">
+                        <label><span style="color:#808080;font-size:16px;">(2) </span> Hours</label>
+                    </div>
+                  
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 course-detail" style="padding-top:15px;padding-left:0px;">
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 Trng_category">
+                        <small class="title">Category</small>
+                        <label> Private </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 exp-date-on">
+                        <small class="title">Created On</small>
+                        <label> 02-09-2016 </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt">
+                        <small class="title">Registrations</small>
+                        <label> 20  </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num">
+                        <small class="title">No.of Lessons</small>
+                        <label>  20  </label>
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+
+          </div>
+        </div>
+    
+    <div class="panel panel-default paper-shadow shadow-course-details" data-z="0.5">
+          <div class="panel-body">
+
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                        <span class="v-center">
+                            <i class="fa fa-github"></i>
+                        </span>
+                  </span>
+                  <a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                  <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                  <li><a ui-sref="website-assign-user">Assign user</a></li>
+                  <li><a href="#">View Detail</a></li>
+                  <li><a href="#">Edit</a></li>
+                  <li><a data-toggle="modal" href="#block-course-view-course">Block Course</a></li>
+              </ul>
+            </div>
+                  
+                <h4 class="text-headline margin-v-5-0"><a ui-sref="website-courses.single">Advanced Java</a></h4>
+                  
+                  <div class="col-lg-3 watchinnerwrapper hourstraining paddlr0" style="cursor:pointer;padding-left:0px;padding-top:8px;">
+                        <label><span style="color:#808080;font-size:16px;">(4) </span> Hours</label>
+                    </div>
+                
+                  
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 course-detail" style="padding-top:15px;padding-left:0px;">
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 Trng_category"  onclick="getTrSlots(191906)">
+                        <small class="title">Category</small>
+                        <label> Public </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 exp-date-on" style="cursor:pointer;padding-left:0px;" onclick="getTrSlots(191906)">
+                        <small class="title">Created On</small>
+                        <label> 02-09-2016 </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt"  onclick="openEventDetails1(191906)">
+                        <small class="title">Registrations</small>
+                        <label>  20  </label>
+                    </div>
+                    
+                <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num" onclick="openEventDetails1(191906)">
+                         <small class="title">No.of Lessons</small>
+                        <label>  20  </label>
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+
+          </div>
+        </div>
+   
+    <div class="panel panel-default paper-shadow shadow-course-details" data-z="0.5">
+          <div class="panel-body">
+
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                        <span class="v-center">
+                            <i class="fa fa-github"></i>
+                        </span>
+                  </span>
+                  <a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                  <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                  <li><a ui-sref="website-assign-user">Assign user</a></li>
+                  <li><a href="#">View Detail</a></li>
+                  <li><a href="#">Edit</a></li>
+                  <li><a data-toggle="modal" href="#block-course-view-course">Block Course</a></li>
+              </ul>
+            </div>
+                  
+                <h4 class="text-headline margin-v-5-0"><a ui-sref="website-courses.single"></a>Core Java</h4>
+                 
+                <div class="col-lg-3 watchinnerwrapper hourstraining paddlr0" style="cursor:pointer;padding-left:0px;padding-top:8px;">
+                        <label><span style="color:#808080;font-size:16px;">(2) </span> Hours</label>
+                    </div>
+                  
+                 
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 course-detail" style="padding-top:15px;padding-left:0px;">
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 Trng_category"  onclick="getTrSlots(191906)">
+                        <small class="title">Category</small>
+                        <label> Private </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 exp-date-on" style="cursor:pointer;padding-left:0px;" onclick="getTrSlots(191906)">
+                        <small class="title">Created On</small>
+                        <label> 02-09-2016 </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt" style="cursor:pointer;" onclick="openEventDetails1(191906)">
+                        <small class="title">Registrations</small>
+                        <label>  20  </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num" style="cursor:pointer;" onclick="openEventDetails1(191906)">
+                         <small class="title">No.of Lessons</small>
+                        <label>  20  </label>
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+
+          </div>
+        </div>
+   
+    <div class="panel panel-default paper-shadow shadow-course-details" data-z="0.5">
+          <div class="panel-body">
+
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                        <span class="v-center">
+                            <i class="fa fa-github"></i>
+                        </span>
+                  </span>
+                  <a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+            <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                  <li><a ui-sref="website-assign-user">Assign user</a></li>
+                  <li><a href="#">View Detail</a></li>
+                  <li><a href="#">Edit</a></li>
+                  <li><a data-toggle="modal" href="#block-course-view-course">Block Course</a></li>
+              </ul>
+            </div>
+                  
+                <h4 class="text-headline margin-v-5-0"><a ui-sref="website-courses.single"></a>Core Java</h4>
+                 
+                <div class="col-lg-3 watchinnerwrapper hourstraining paddlr0" style="cursor:pointer;padding-left:0px;padding-top:8px;">
+                        <label><span style="color:#808080;font-size:16px;">(2) </span> Hours</label>
+                    </div>
+                  
+                  
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 course-detail" style="padding-top:15px;padding-left:0px;">
+                   
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 Trng_category"  onclick="getTrSlots(191906)">
+                        <small class="title">Category</small>
+                        <label> Public</label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 exp-date-on" onclick="getTrSlots(191906)">
+                        <small class="title">Created On</small>
+                        <label> 02-09-2016 </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt" onclick="openEventDetails1(191906)">
+                        <small class="title">Registrations</small>
+                        <label> 20 </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num"  onclick="openEventDetails1(191906)">
+                        <a  ui-sref=""> <small class="title">No.of Lessons</small></a>
+                        <label>  20  </label>
+                    </div>
+                    
+                    
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+   
+    <div class="panel panel-default paper-shadow shadow-course-details" data-z="0.5">
+          <div class="panel-body">
+
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                        <span class="v-center">
+                            <i class="fa fa-github"></i>
+                        </span>
+                  </span>
+                  <a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                  <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                  <li><a ui-sref="website-assign-user">Assign user</a></li>
+                  <li><a href="#">View Detail</a></li>
+                  <li><a href="#">Edit</a></li>
+                  <li><a data-toggle="modal" href="#block-course-view-course">Block Course</a></li>
+              </ul>
+            </div>
+                  
+                <h4 class="text-headline margin-v-5-0"><a ui-sref="website-courses.single"></a>Hadoop</h4>
+                 
+                  
+                <div class="col-lg-3 watchinnerwrapper hourstraining paddlr0" style="cursor:pointer;padding-left:0px;padding-top:8px;">
+                        <label><span style="color:#808080;font-size:16px;">(2) </span> Hours</label>
+                    </div>
+                  
+                  
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 course-detail" style="padding-top:15px;padding-left:0px;">
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 Trng_category"  onclick="getTrSlots(191906)">
+                        <small class="title">Category</small>
+                        <label> Private </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewschedulepart paddlr0 exp-date-on" style="cursor:pointer;padding-left:0px;" onclick="getTrSlots(191906)">
+                        <small class="title">Created On</small>
+                        <label>02-09-2016 </label>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt" onclick="openEventDetails1(191906)">
+                        <small class="title">Registrations</small>
+                        <label> 20  </label>
+                    </div>
+                    
+                 <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num" style="cursor:pointer;" onclick="openEventDetails1(191906)">
+                    <small class="title">No.of Lessons</small>
+                    <label> 20 </label>
+                </div>
+                    
+                  </div>
+                  
+              </div>
+            </div>
+
+          </div>
+        </div>
+   <br/>
+        <div class="loader_div">
+            <img src="images/loader.gif" />
+          </div>
+        
+        </form>
+            </div>
+
+          </div>
+          <!-- // END Panes -->
+
+        </div>
+        <!-- // END Tabbable Widget -->
+        
+      </div>
+      <div class="col-md-3" style="padding-top:20px;">
+
+        <div class="panel panel-default" data-toggle="panel-collapse" data-open="true">
+          <div class="panel-heading panel-collapse-trigger">
+            <h4 class="panel-title">My Account</h4>
+          </div>
+          <div class="panel-body list-group">
+            <ul class="list-group list-group-menu">
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="view-courses">Course List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-student-course-forums">User List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-instructor-edit-course">Create Course</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-create-user">Create User </a></li>
+                <li class="list-group-item" ui-sref-active="active" style="position:relative;"><a class="link-text-color" ui-sref="website-ques and answr">Question and Answers </a><badge class="register_badge"> 05 </badge></li>
+                 <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-saved-courses-page">Saved Courses </a></li>
+              <!--<li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-student.messages">Messages</a></li>
+              <li class="list-group-item"><a class="link-text-color" ui-sref="login"><span>Logout</span></a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--block-course popup start-->
+
+<div class="modal fade" id="block-course-view-course" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="top:150px;">
+        <div class="modal-body content-block-course">
+          <div class="mainwrappercomment">
+                <div class="mainiinerwrapper">
+                <div class="errormsg">
+                <p style=" font-size: 18px !important;">Are you sure , to block the Course?</p>
+                </div>
+                </div>
+        </div> 
+        </div>
+        <div class="btnError">
+        <button class="btn-yes" data-dismiss="modal">Yes</button>
+        <button class="btn-no" data-dismiss="modal">No</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!--end popup-->

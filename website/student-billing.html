@@ -1,0 +1,371 @@
+
+<style>
+.navbar-brand.navbar-brand-logo img{
+        width: 170px !important;
+    }
+    </style>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand navbar-brand-logo">
+          <a href="#"><img src="images/skillogic_logo.png" width="170"></a>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-nav">
+     <div class="navbar-right">
+        <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
+          <!-- user -->
+          <li class="dropdown user">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li ui-sref-active="active"><a ui-sref="website-student.dashboard"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.courses"><i class="fa fa-mortar-board"></i> My Courses</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.private-profile"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a ui-sref="login"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </li>
+          <!-- // END user -->
+        </ul>
+        <a ui-sref="login" class="navbar-btn btn btn-primary">Log In</a>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="page-section">
+    <div class="row">
+
+      <div class="col-md-9">
+
+        <!-- Tabbable Widget -->
+        <div class="tabbable paper-shadow relative" data-z="0.5">
+
+          <!-- Tabs -->
+          <ul class="nav nav-tabs">
+            <li  ui-sref-active="active"><a ui-sref="website-student.private-profile"><!--<i class="fa fa-fw fa-lock"></i>--> <span class="hidden-sm hidden-xs">User Details</span></a></li>
+            <li class="active" ui-sref-active="active"><a ui-sref="website-student.billing"><!--<i class="fa fa-fw fa-credit-card"></i>--> <span class="hidden-sm hidden-xs">Course Details</span></a></li>
+              <li ui-sref-active="active"><a ui-sref="website-questions-answers"><!--<i class="fa fa-fw fa-credit-card"></i>--> <span class="hidden-sm hidden-xs">Questions</span></a></li>
+              <li ui-sref-active="active"><a ui-sref="website-notespage"><!--<i class="fa fa-fw fa-credit-card"></i>--> <span class="hidden-sm hidden-xs">Notes</span></a></li>
+          </ul>
+          <!-- // END Tabs -->
+
+          <!-- Panes -->
+<div class="tab-content">
+
+    <div id="billing" class="tab-pane active">
+        <form action="#" class="form-horizontal">
+                
+           <div class="panel panel-default paper-shadow shadow-course-details" data-z="0.5">
+          <div class="panel-body">
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                        <span class="v-center">
+                            <i class="fa fa-github"></i>
+                        </span>
+                  </span>
+                  <a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                  <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                 <li><a data-toggle="modal" href="#expirydate-extend">Extend Expiry Date</a></li>
+                 <li><a data-toggle="modal" href="#block-course">Block Course</a></li>
+              </ul>
+            </div>
+                  
+                <h4 class="text-headline margin-v-5-0"><a ui-sref="website-courses.single">JavaScript</a></h4><span class="course-block">Course Blocked </span>
+                  
+               <div class="col-lg-3 col-sm-3 watchinnerwrapper hourstraining paddlr0 lesson-hours">
+                        <label><span class="lesson-hours-label">(10) </span>  Hours</label>
+                    </div>
+                 
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 div-exp-date course-detail">
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 exp-date-on" onclick="openEventDetails1(191906)">
+                        <small class="title">Expired On</small>
+                        <label> <span style="color:#808080;font-size:16px;font-weight:400;">02-09-2016 </span></label>
+                    </div>
+                   
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt" style="cursor:pointer;" onclick="openEventDetails1(191906)">
+                        <small class="title">Course Completion</small>
+                        <label> <span class="percentg-complt"> 40% </span> </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num" style="cursor:pointer;" onclick="openEventDetails1(191906)">
+                        <small class="title">No.of Lessons</small>
+                        <label> <span class="no-lessons"> 20 </span> </label>
+                    </div>
+                  </div>
+                   
+              </div>
+            </div>
+
+          </div>
+        </div>
+                
+               <div class="panel panel-default paper-shadow" data-z="0.5">
+          <div class="panel-body">
+
+            <div class="media media-clearfix-xs">
+              <div class="media-left text-center">
+                <div class="cover width-150 width-100pc-xs overlay cover-image-full hover margin-v-0-10">
+                  <span class="img icon-block height-130 bg-default"></span>
+                  <span class="overlay overlay-full padding-none icon-block bg-default">
+                        <span class="v-center">
+                            <i class="fa fa-github"></i>
+                        </span>
+                  </span>
+                  <a ui-sref="website-courses.single" class="overlay overlay-full overlay-hover overlay-bg-white">
+                    <span class="v-center">
+                            <span class="btn btn-circle btn-white btn-lg"><i class="fa fa-graduation-cap"></i></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="media-body">
+                  <div class="btn-group" style="float:right;">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+               <div class="col-md-4 col-sm-6 col-lg-3"><i class="md md-more-vert" style="font-size:22px;"></i></div>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="#">Extende Expiry Date</a></li>
+                <li><a href="#">Block Course</a></li>
+              </ul>
+            </div>
+                  
+                <h4 class="text-headline margin-v-5-0"><a ui-sref="website-courses.single">AngularJS</a></h4>
+                  <div class="col-lg-3 col-sm-3 watchinnerwrapper hourstraining paddlr0 lesson-hours">
+                        <label><span class="lesson-hours-label">(10) </span>  Hours</label>
+                    </div>
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watchpanel paddlr0 div-exp-date course-detail">
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 exp-date-on" onclick="openEventDetails1(191906)">
+                        <small class="title">Expired On</small>
+                        <label> <span style="color:#808080;font-size:16px;font-weight:400;">02-09-2016 </span></label>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 div-cours-complt" style="cursor:pointer;" onclick="openEventDetails1(191906)">
+                        <small class="title">Course Completion</small>
+                        <label> <span class="percentg-complt"> 60% </span> </label>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-3 watchinnerwrapper viewdetailtrainingbutton paddlr0 lessons-num" style="cursor:pointer;" onclick="openEventDetails1(191906)">
+                        <small class="title">No.of Lessons</small>
+                        <label> <span class= "no-lessons"> 20 </span> </label>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+         
+                  
+        </form>
+            </div>
+
+          </div>
+          <!-- // END Panes -->
+
+        </div>
+        <!-- // END Tabbable Widget -->
+        
+      </div>
+      <div class="col-md-3 side-list">
+
+        <div class="panel panel-default" data-toggle="panel-collapse" data-open="true">
+          <div class="panel-heading panel-collapse-trigger">
+            <h4 class="panel-title">My Account</h4>
+          </div>
+          <div class="panel-body list-group">
+            <ul class="list-group list-group-menu">
+            <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="view-courses">Course List</a></li>
+            <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-student-course-forums">User List</a></li>
+            <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-instructor-edit-course">Create Course</a></li>
+            <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-create-user">Create User </a></li>
+            <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-ques and answr">Question and Answers </a></li>
+            <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-saved-courses-page">Saved Courses </a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--
+  <div class="modal fade" id="block-course" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        
+                                        </div>
+                                     <div class="modal-body">
+                                            
+                                        <div class="mainwrappercomment">
+                                            <div class="mainiinerwrapper">
+                                           <div class="errormsg">
+                                               <p style=" font-size: 18px !important;">Are you sure , to block the Course?</p>
+                                            </div>
+                                            </div>
+                                        </div> 
+                                            
+                                    </div>
+                                        <div class="btnError">
+                
+                                    <button class="styled-button-3"  data-toggle="modal" href="#course_fee_edit" id="editthecoursefee" data-dismiss="modal">Yes</button>
+                
+                                    <button class="styled-button-4 callbackrequestmodalhide" data-dismiss="modal">No</button>
+                                            
+                                </div>
+                                    </div>
+                                </div>
+                            </div>
+-->
+
+<!--block-course popup start-->
+
+<div class="modal fade" id="block-course" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="top:150px;">
+        <div class="modal-body content-block-course">
+          <div class="mainwrappercomment">
+            <div class="mainiinerwrapper">
+                <div class="errormsg">
+                    <p style=" font-size: 18px !important;">Are you sure , to block the Course?</p>
+                </div>
+            </div>
+        </div> 
+        </div>
+        <div class="btnError">
+        <button class="btn-yes" data-dismiss="modal">Yes</button>
+        <button class="btn-no" data-dismiss="modal">No</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!--end popup-->
+
+
+<!--expiry date extend popup-->
+
+ <div class="modal fade expirydate-extnd" id="expirydate-extend" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="top:150px;">
+          <div class="modal-header">
+              <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+              <h3 id="myModalLabel">Change Expiry Date</h3>
+            </div>
+        <div class="modal-body">
+          <div class="details-expirycourse">
+              
+              <span style="margin: 0 0 27px -20%; line-height: 43px;">Expired On : <label> 02 - 09 - 2016</label></span>
+              <div style="width:122%;"> <span>Type : </span><label style="margin:0px;"><div class="radio radio-info radio-inline">
+                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                <label for="inlineRadio1">Date limit</label>
+              </div>
+                  <div class="radio radio-info radio-inline">
+                <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                <label for="inlineRadio2" style="margin:0px;">No.of Days</label>
+              </div>
+              <div class="radio radio-info radio-inline">
+                <input type="radio" id="inlineRadio3" value="option3" name="radioInline">
+                <label for="inlineRadio3" style="margin:0px;">Life Time</label>
+              </div>
+                  </label></div>
+                
+                <span class="change-expiry-date">Change Expiry Date : <label>
+                <div class="form-group datepic-changeexp">
+                <input id="datepicker" type="text" class="form-control datepicker">
+                </div>
+                </label>
+              </span>
+            </div>
+        </div>
+          <div class="note-messgae">
+          <label class="label-note">Expiry date has note changed</label>
+          
+          </div>
+        <div class="btnError">
+        <button class="btn-submit" data-toggle="modal" data-dismiss="modal" href="#success-popup">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!--end popup-->
+
+
+<!--popup for success-->
+<div class="modal fade" id="success-popup" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="top:150px;">
+          <div class="modal-header success-icon">
+              <!--<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>-->
+              <img src="images/confirm_icon.png">
+            </div>
+          <div class="labelforsuccess">
+          
+              <label> Success </label>
+          
+          </div>
+        <div class="modal-body">
+          <div class="mainwrappercomment">
+            <div class="mainiinerwrapper">
+                <div class="errormsg">
+                    <p style="font-size: 18px !important;">Expiry Date has been changed</p>
+                </div>
+            </div>
+        </div> 
+        </div>
+        <div class="btnError">
+        <button class="btn-ok" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!--end popup-->

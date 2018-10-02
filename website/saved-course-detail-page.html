@@ -1,0 +1,279 @@
+
+<style>
+.navbar-brand.navbar-brand-logo img{
+    width: 170px !important;
+}
+</style>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        
+      <div class="navbar-brand navbar-brand-logo">
+        <a href="#"><img src="images/skillogic_logo.png"></a>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-nav">
+      <div class="navbar-right">
+        <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
+          <!-- user -->
+          <li class="dropdown user">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li ui-sref-active="active"><a ui-sref="website-student.dashboard"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.courses"><i class="fa fa-mortar-board"></i> My Courses</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.private-profile"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a ui-sref="login"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </li>
+          <!-- // END user -->
+        </ul>
+        <a ui-sref="login" class="navbar-btn btn btn-primary">Log In</a>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+
+  </div>
+</div>
+<div class="container detailsofcourse"  style="margin-top:40px;">
+    <h4  align-userlist style="margin-left:20px;margin-bottom:38px;font-size:20px;float:left;width:61%;margin-top:2px;">Course Detail </h4>
+    <!--<div class="media-right">
+        <button class="btn btn-primary" ui-sref="website-view-courses">detail</button>
+    </div>-->
+     <div class="col-md-9">
+         
+      <div class="tab-content">
+
+    <div id="account" class="tab-pane active">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label">CourseName :</label>
+                  <div class="col-md-6" style="margin-top:10px;">
+                    <div class="media v-middle">
+                      <div class="media-body">
+                        Java
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label">Registrations :</label>
+                  <div class="col-md-6" style="margin-top:10px;">
+                    <div class="media v-middle">
+                      <div class="media-body">
+                       <a ui-sref="website-registration-list"> 20 Members </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label">Description :</label>
+                  <div class="col-md-8" style="margin-top:10px;">
+                    <div class="row">
+                      <div class="col-md-12">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label">Course Image :</label>
+                  <div class="col-md-8" style="margin-top:10px;">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <img src="images/Sun-Java-JDK_1.jpg"  style="width:100px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>      
+                  
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label"> Lesson1 :</label>
+                  <div class="col-md-8" style="margin-top:3px;">
+                       <h5>Java</h5>
+                       <div class="panel panel-default">
+          <!-- Progress table -->
+                          
+          <div class="table-responsive">
+            <table class="table v-middle">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Topic Name</th>
+                  <th>Video Timing</th>
+                  <th>Video Url</th>
+                </tr>
+              </thead>
+              <tbody id="responsive-table-body">
+                <tr>
+                  
+                  <td>1</td>
+                  <td>Advanced Java </td>
+                  <td> 02:00 min </td>
+                  <td><a href="#">http://www.advancejava.com</a></td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td>2</td>
+                  <td>Core Java </td>
+                  <td> 01:49 min</td>
+                  <td><a href="#">http://www.javascript.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>3</td>
+                  <td>Structs </td>
+                  <td>02:05 min</td>
+                  <td><a href="#">http://www.java.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>4</td>
+                  <td>web services </td>
+                  <td> 02:30 min</td>
+                  <td><a href="#">http://www.html.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>5</td>
+                  <td>Strings </td>
+                  <td>01:49 min</td>
+                  <td><a href="#">http://www.html.com</a></td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // Progress table -->
+
+        </div>
+
+  </div>
+ </div>
+<div class="form-group">
+<label for="inputEmail3" class="col-md-3 control-label"> Lesson2 :</label>
+    <div class="col-md-8" style="margin-top:3px;">
+    <h5>HTML and CSS</h5>
+    <div class="panel panel-default">
+          <!-- Progress table -->
+       
+          <div class="table-responsive">
+              
+            <table class="table v-middle">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Topic Name</th>
+                    <th>Video Timing</th>
+                  <th>Video Url</th>
+                </tr>
+              </thead>
+              <tbody id="responsive-table-body">
+                <tr>
+                  
+                  <td>1</td>
+                  <td> Introduction HTML </td>
+                  <td> 02:00 min </td>
+                  <td><a href="#">http://www.advancejava.com</a></td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td>2</td>
+                  <td> HTML Elements </td>
+                  <td> 01:49 min</td>
+                  <td><a href="#">http://www.javascript.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  <td>3</td>
+                  <td> HTML attributes </td>
+                  <td>02:05 min</td>
+                  <td><a href="#">http://www.java.com</a></td>
+                </tr>
+                  
+                <tr>
+                  <td>4</td>
+                  <td>HTML Headings </td>
+                  <td> 02:30 min</td>
+                  <td><a href="#">http://www.html.com</a></td>
+                </tr>
+                  
+                  <tr>
+                  <td>5</td>
+                  <td>HTML Paragraphs </td>
+                  <td>01:49 min</td>
+                  <td><a href="#">http://www.html.com</a></td>
+                </tr>
+                  
+                <tr>
+                  <td>6</td>
+                  <td>HTML Styles </td>
+                  <td>01:49 min</td>
+                  <td><a href="#">http://www.html.com</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // Progress table -->
+
+        </div>
+
+                  </div>
+                </div>
+                <div class="form-group margin-none" style="text-align:center;">
+                  <div class="col-md-offset-2 col-md-10">
+                       <button class="btn btn-primary" ui-sref="website-saved-courses-page">back</button>
+                      <button class="btn btn-default course-edit-btn" ui-sref="website-instructor-edit-course">edit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+    </div>
+         
+    </div>
+    
+    <div class="col-md-3 side-list">
+
+        <div class="panel panel-default" data-toggle="panel-collapse" data-open="true">
+          <div class="panel-heading panel-collapse-trigger">
+            <h4 class="panel-title">My Account</h4>
+          </div>
+          <div class="panel-body list-group">
+            <ul class="list-group list-group-menu">
+              <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="view-courses">Course List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-student-course-forums">User List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-instructor-edit-course">Create Course</a></li>
+              <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-create-user">Create User </a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-ques and answr">Questions </a></li>
+             <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-saved-courses-page">Saved Courses </a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    
+    
+    
+</div>
+
+

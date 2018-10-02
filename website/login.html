@@ -1,0 +1,103 @@
+
+<style>
+    
+    body.login .lock-container .panel img {
+    margin: 10px 0 10px;
+}
+
+</style>
+
+
+<div id="content">
+  <div class="container-fluid">
+
+    <div class="lock-container">
+      <div class="panel panel-default text-center paper-shadow" data-z="0.5">
+        <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
+        <img src="images/people/110/guy-5.jpg" class="img-circle width-80">
+        <div class="panel-body">
+          <div class="form-group">
+            <div class="form-control-material">
+              <input class="form-control" id="username" type="text" placeholder="Username">
+              <label for="username">Username</label>
+            </div>
+              <small class="validation-mail">(Enter valid email id)</small>
+          </div>
+          <div class="form-group">
+            <div class="form-control-material">
+              <input class="form-control" id="password" type="password" placeholder="Enter Password">
+              <label for="password">Password</label>
+            </div>
+              <small class="validation-mail">(Enter Correct password)</small>
+          </div>
+
+          <a ui-sref="website-student.dashboard" class="btn btn-primary login-btn">Login <i class="fa fa-fw fa-unlock-alt"></i></a>
+          <a href="#password-forgot" class="forgot-password"  data-toggle="modal">Forgot Password</a>
+            
+            <div class="btn-facebook">
+            <span>Facebook</span>
+            </div>
+            <div class="btn-google">
+            <span>Google</span>
+            
+            </div>
+            <div class="btn-linkedin" style="margin-bottom:10px;">
+            <span>LinkedIn</span>
+            </div>
+            
+          <a ui-sref="sign-up" class="link-text-color">Create account</a>
+                
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--popup for forgot password-->
+
+<div class="modal fade change-password" id="password-forgot" role="dialog">
+    <div class="modal-dialog ">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="top:150px;">
+        <div class="modal-header">
+          <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+              <h3 id="myModalLabel">Forgot Password</h3>
+        </div>
+        <div class="modal-body">
+                <div class="mainwrappercomment">
+            <div class="mainiinerwrapper">
+                <div class="errormsg">
+                    <p style=" font-size: 18px !important;">Please, Enter the Registered email address</p>
+                </div>
+            </div>
+        </div> 
+            <div class="form-group new-pwd">
+                  <label for="" class="control-label email-label"> Email Id : </label>
+                  <div class="input-txt">
+                    <div class="form-control-material static required">
+                      <div class="input-group">
+                        <input type="text" class="form-control used" id="website" placeholder="Enter Mail id">
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+          <div class="label-sucess">Password sent successully to your mail id</div>
+          
+       <div class="btnError">
+        <button class="btn-submit"  data-dismiss="modal">Send</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!--end popup-->
+
+
+
+

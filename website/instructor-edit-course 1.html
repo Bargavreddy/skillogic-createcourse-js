@@ -1,0 +1,651 @@
+
+
+
+<style>
+.navbar-brand.navbar-brand-logo img{
+    width: 170px !important;
+}
+</style>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        
+      <div class="navbar-brand navbar-brand-logo">
+        <a href="#"><img src="images/skillogic_logo.png"></a>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-nav">
+      <div class="navbar-right">
+        <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
+          <!-- user -->
+          <li class="dropdown user">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li ui-sref-active="active"><a ui-sref="website-student.dashboard"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.courses"><i class="fa fa-mortar-board"></i> My Courses</a></li>
+              <li ui-sref-active="active"><a ui-sref="website-student.private-profile"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a ui-sref="login"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </li>
+          <!-- // END user -->
+        </ul>
+        <a ui-sref="login" class="navbar-btn btn btn-primary">Log In</a>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+
+  </div>
+</div>
+
+
+<div class="container" id="create-course">
+
+  <div class="page-section">
+    <div class="row">
+     <h4 class="course_create">Create Course</h4>
+      <div class="col-md-9">
+
+        <!-- Tabbable Widget -->
+        <div class="tabbable paper-shadow relative" data-z="0.5">
+
+          <!-- Panes -->
+          <div class="tab-content">
+              
+        <div class="panel panel-default typed-course">
+            <div class="panel-body">
+                <label class="type-course">Course type</label>
+              <div class="radio radio-info radio-inline">
+                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                <label for="inlineRadio1">Public</label>
+              </div>
+              <div class="radio radio-info radio-inline">
+                <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                <label for="inlineRadio2">Private</label>
+                </div>
+            </div>
+          </div>
+
+              
+            <div id="course" class="tab-pane active">
+              <form action="">
+                <div class="form-group form-control-material static required ">
+                  <input type="text" name="title" id="title" placeholder="Enter Course Name" class="form-control used" />
+                  <label for="title">Course Name</label>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-12 control-label add-description">Description</label>
+                  <div class="col-sm-12" style="margin-bottom:30px;">
+                    <div class="form-control-material" style="height:100px;">
+                      <textarea id="textarea" class="form-control" rows="5" style="height:80px;"></textarea>
+                      <label for="textarea">Write Description</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+         <!--<div class="main-class">
+             <div class="upload-img">
+            <p>
+            <label id="uploadimgLabel11" style="">Upload Profile Image : &nbsp;&nbsp;&nbsp;&nbsp;<small></small></label>
+            <span class="field">
+            <input type="file" class="uniform-file normal progressCnt" name="filename" id="org_logo" onchange="validateImage(this,'organisation_logo_span')">
+            <input type="hidden" id="org_logo_hidden" value="http://52.88.86.54/newscaledimages/3627_1471953025044_author.jpg">
+            </span>
+            </p>  
+                 </div>
+             <div class="image-uploaded">
+              <p>
+            <label id="uploadimgLabel0">Uploaded Profile Image :</label>
+
+            </p>
+             </div>
+            </div> -->
+              <div class="profile-image">
+              <label>Upload Profile image</label>
+              </div>
+             <div class="image-upload">
+                 
+                <input type='file' />
+              <img id="myImg" src="#" alt="your image" />
+            </div>
+        <div class="form-group form-control-material col-sm-12 static required" style="margin-top:25px;">
+        <input  type="text" name="title" id="title" placeholder="Enter lesson name" class="form-control used" style="margin-top:15px;"/>
+                  <label for="title">Lesson Name</label>
+                </div>
+              
+        <div class="panel panel-default col-sm-12" style="padding:0px;">
+            
+          <!-- Progress table -->
+          <div class="table-responsive">
+            <table class="table v-middle">
+              <thead>
+                <tr>
+                  <th>Topic Wise</th>
+                  <!--<th>Video URL</th>
+                    <th>Video Time</th>-->
+                  <th class="text-right"></th>
+                </tr>
+              </thead>
+              <tbody id="responsive-table-body">
+                <tr>
+                  <td><div class="form-group form-control-material static required" style="width:130px;">
+                  <input type="text" name="title" id="title" placeholder="topic Name" class="form-control used"/>
+                  <!--<label for="title" >Enter Topic Name</label>-->
+                </div>
+                    <div class="form-group form-control-material static required" style="width:300px;">
+                  <input type="text" name="title" id="title" placeholder="Video url" class="form-control used"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                </div>
+                    </td>
+                  <!--<td></td>-->
+                    
+                <!--<td><div class="form-group form-control-material static required div-video-time">
+                  <input type="text" name="title" id="title" placeholder="hh" class="form-control used" style="text-align:center;" />
+                  <label for="title" >Enter Video Url</label>
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time">
+                  <input type="text" name="title" id="title" placeholder="mm" class="form-control used" style="text-align:center;"/>
+                  <label for="title" >Enter Video Url</label>
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time" >
+                  <input type="text" name="title" id="title" placeholder="ss" class="form-control used" style="text-align:center;"/>
+                  <label for="title" >Enter Video Url</label>
+                        </div>
+                        
+                    </td>-->
+                  <td class="text-right">
+                    <a href="#"><button class="btn btn-primary btn-save">SAVE</button> </a>
+                    <a href="#"><button class="btn btn-default btn-addtopic">ADD TOPIC</button></a>
+                  </td>
+                </tr>
+                <tr>
+                 <td> <div class="form-group form-control-material static required" style="width:130px;">
+                  <input type="text" name="title" id="title" placeholder="topic Name" class="form-control used"/>
+                  <!--<label for="title" >Enter Topic Name</label>-->
+                </div> </td>
+                  <td><div class="form-group form-control-material static required" style="width:300px;">
+                  <input type="text" name="title" id="title" placeholder="Video url" class="form-control used"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                </div></td>
+                    <td><div class="form-group form-control-material static required div-video-time">
+                  <input type="text" name="title" id="title" placeholder="hh" class="form-control used" style="text-align:center;" />
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time demo-video-min">
+                  <input type="text" name="title" id="title" placeholder="mm" class="form-control used" style="text-align:center;"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time demo-video-sec" >
+                  <input type="text" name="title" id="title" placeholder="ss" class="form-control used" style="text-align:center;"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        
+                    </td>
+                  <td class="text-right">
+                    <a><button class="btn btn-primary btn-save1 btn-save">SAVE</button> </a>
+                    <a><button class="btn btn-default btn-addtopic">ADD TOPIC</button></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // Progress table -->
+        </div>
+              
+            <span>  <button class="btn btn-default">ADD LESSON </button> </span>
+              
+        <div class="form-group form-control-material col-sm-12 static required" style="margin-top:25px;">
+                  <input  type="text" name="title" id="title" placeholder="Enter lesson name" class="form-control used" style="margin-top:15px;"/>
+                  <label for="title">Lesson Name</label>
+                </div>
+        <span> </span>
+              
+        <div class="panel panel-default col-sm-12" style="padding:0px;">
+          <!-- Progress table -->
+          <div class="table-responsive">
+            <table class="table v-middle">
+              <thead>
+                <tr>
+                  <th>Topic Name</th>
+                  <th>Video URL</th>
+                    <th>Video Time</th>
+                  <th class="text-right"></th>
+                </tr>
+              </thead>
+              <tbody id="responsive-table-body">
+                <tr>
+                  <td>  <div class="form-group form-control-material static required" style="width:130px;">
+                  <input type="text" name="title" id="title" placeholder="topic Name" class="form-control used"/>
+                  <!--<label for="title" >Enter Topic Name</label>-->
+                </div> </td>
+                  <td><div class="form-group form-control-material static required" style="width:300px;">
+                  <input type="text" name="title" id="title" placeholder="Video url" class="form-control used"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                </div></td>
+                    <td><div class="form-group form-control-material static required div-video-time">
+                  <input type="text" name="title" id="title" placeholder="hh" class="form-control used" style="text-align:center;" />
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time demo-video-min">
+                  <input type="text" name="title" id="title" placeholder="mm" class="form-control used" style="text-align:center;"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time demo-video-sec" >
+                  <input type="text" name="title" id="title" placeholder="ss" class="form-control used" style="text-align:center;"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        
+                    </td>
+                  <td class="text-right">
+                    <a href="#"><button class="btn btn-primary btn-save">SAVE</button> </a>
+                    <a href="#"><button class="btn btn-default btn-addtopic">ADD TOPIC</button></a>
+                  </td>
+                </tr>
+                <tr>
+                 <td>  <div class="form-group form-control-material static required">
+                  <input type="text" name="title" id="title" placeholder="topic Name" class="form-control used"/>
+                  <!--<label for="title" >Enter Topic Name</label>-->
+                </div> </td>
+                  <td><div class="form-group form-control-material static required">
+                  <input type="text" name="title" id="title" placeholder="Video url" class="form-control used"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                </div></td>
+                    <td><div class="form-group form-control-material static required div-video-time">
+                  <input type="text" name="title" id="title" placeholder="hh" class="form-control used" style="text-align:center;" />
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time demo-video-min">
+                  <input type="text" name="title" id="title" placeholder="mm" class="form-control used" style="text-align:center;"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        <div class="form-group form-control-material static required div-video-time demo-video-sec" >
+                  <input type="text" name="title" id="title" placeholder="ss" class="form-control used" style="text-align:center;"/>
+                  <!--<label for="title" >Enter Video Url</label>-->
+                        </div>
+                        
+                    </td>
+                  <td class="text-right">
+                    <a><button class="btn btn-primary btn-save">SAVE</button> </a>
+                    <a><button class="btn btn-default btn-addtopic">ADD TOPIC</button></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // Progress table -->
+        </div>
+              
+              
+              
+              <div class="button-for-course" style="text-align:center;">
+
+                <button class="btn btn-primary">SUBMIT COURSE</button>
+                <button class="btn btn-white" id="button-preview">PREVIEW</button>
+              </div>
+    
+          </div>
+          <!-- // END Panes -->
+
+        </div>
+        <!-- // END Tabbable Widget -->
+
+        <br/>
+        <br/>
+
+      </div>
+      <div class="col-md-3 side-list">
+
+        <div class="panel panel-default" data-toggle="panel-collapse" data-open="true">
+          <div class="panel-heading panel-collapse-trigger">
+            <h4 class="panel-title">My Account</h4>
+          </div>
+          <div class="panel-body list-group">
+            <ul class="list-group list-group-menu">
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="view-courses">Course List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-student-course-forums">User List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-instructor-edit-course1">Create Course</a></li>
+              <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-create-user">Create User </a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-ques and answr">Questions </a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="container" id="preview-details" style="margin-top:40px;">
+     <div class="col-md-9">
+
+ <div class="tab-content">
+
+    <div id="account" class="tab-pane active">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label">CourseName :</label>
+                  <div class="col-md-6" style="margin-top:10px;">
+                    <div class="media v-middle">
+                      <div class="media-body">
+                        Java
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label">Description :</label>
+                  <div class="col-md-8" style="margin-top:10px;">
+                    <div class="row">
+                      <div class="col-md-12">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label">Image :</label>
+                  <div class="col-md-8" style="margin-top:10px;">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <img src="images/guy-5.jpg"  style="width:100px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-3 control-label"> Lesson1 :</label>
+                  <div class="col-md-8" style="margin-top:3px;">
+                       <h5>Java</h5>
+                       <div class="panel panel-default">
+          <!-- Progress table -->
+                          
+          <div class="table-responsive">
+            <table class="table v-middle">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Topic Name</th>
+                  <th>Video Url</th>
+                </tr>
+              </thead>
+              <tbody id="responsive-table-body">
+                <tr>
+                  
+                  <td>1</td>
+                  <td>Advanced Java </td>
+                  <td><a href="#">http://www.advancejava.com</a></td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td>2</td>
+                  <td>Core Java </td>
+                  <td><a href="#">http://www.javascript.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>3</td>
+                  <td>Structs </td>
+                  <td><a href="#">http://www.java.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>4</td>
+                  <td>web services </td>
+                  <td><a href="#">http://www.html.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>5</td>
+                  <td>Strings </td>
+                  <td><a href="#">http://www.html.com</a></td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // Progress table -->
+
+        </div>
+
+  </div>
+ </div>
+<div class="form-group">
+<label for="inputEmail3" class="col-md-3 control-label"> Lesson2 :</label>
+    <div class="col-md-8" style="margin-top:3px;">
+    <h5>HTML and CSS</h5>
+    <div class="panel panel-default">
+          <!-- Progress table -->
+       
+          <div class="table-responsive">
+              
+            <table class="table v-middle">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Topic Name</th>
+                  <th>Video Url</th>
+                </tr>
+              </thead>
+              <tbody id="responsive-table-body">
+                <tr>
+                  
+                  <td>1</td>
+                  <td> Introduction HTML </td>
+                  <td><a href="#">http://www.advancejava.com</a></td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td>2</td>
+                  <td> HTML Elements </td>
+                  <td><a href="#">http://www.javascript.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>3</td>
+                  <td> HTML attributes </td>
+                  <td><a href="#">http://www.java.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>4</td>
+                  <td>HTML Headings </td>
+                  <td><a href="#">http://www.html.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>5</td>
+                  <td>HTML Paragraphs </td>
+                  <td><a href="#">http://www.html.com</a></td>
+                  
+                </tr>
+                  
+                  <tr>
+                  
+                  <td>6</td>
+                  <td>HTML Styles </td>
+                  <td><a href="#">http://www.html.com</a></td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // Progress table -->
+
+        </div>
+
+                  </div>
+                </div>
+                <div class="form-group margin-none" style="text-align:center;">
+                  <div class="col-md-offset-2 col-md-10">
+                       <button class="btn btn-default" id="back-create-course">BACK</button>
+                    <button type="submit" class="btn btn-primary paper-shadow relative" data-z="0.5" data-hover-z="1" data-animated>SUBMIT COURSE</button>
+                      
+                  </div>
+                </div>
+              </form>
+            </div>
+    </div>
+    </div>
+    <div class="col-md-3 side-list">
+
+        <div class="panel panel-default" data-toggle="panel-collapse" data-open="true">
+          <div class="panel-heading panel-collapse-trigger">
+            <h4 class="panel-title">My Account</h4>
+          </div>
+          <div class="panel-body list-group">
+            <ul class="list-group list-group-menu">
+              <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="view-courses">Course List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-student-course-forums">User List</a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-instructor-edit-course1">Create Course</a></li>
+              <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-create-user">Create User </a></li>
+                <li class="list-group-item" ui-sref-active="active"><a class="link-text-color" ui-sref="website-ques and answr">Questions </a></li>
+            
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+</div>
+
+<script>
+ $(document).ready(function(){
+     
+     $("#button-preview").click(function(){
+         
+         $("#preview-details").show();
+         $("#create-course").hide();
+         
+     });
+     $("#back-create-course").click(function(){
+         $("#preview-details").hide();
+         $("#create-course").show();
+     });
+     $("#add-topic-course").click(function(){
+         $("#new-topic").show();
+     });
+ });
+</script>
+
+<script>
+
+    $(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
+
+</script>
+
+
+<button class="btn btn-success" data-toggle="modal" href="#success-popup">Success</button>
+<button class="btn btn-danger" data-toggle="modal" href="#failure-popup">Alert</button>
+<!--popup for success-->
+<div class="modal fade" id="success-popup" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="top:150px;">
+          <div class="modal-header success-icon">
+              <!--<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>-->
+              <img src="images/confirm_icon.png">
+            </div>
+          <div class="labelforsuccess">
+          
+              <label> Success </label>
+          
+          </div>
+        <div class="modal-body">
+          <div class="mainwrappercomment">
+                <div class="mainiinerwrapper">
+                <div class="errormsg">
+                <p style="font-size: 18px !important;">Expiry Date has been changed</p>
+                </div>
+                </div>
+        </div> 
+        </div>
+        <div class="btnError">
+        <button class="btn-ok" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!--end popup-->
+
+
+<!--popup for failure-->
+<div class="modal fade" id="failure-popup" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="top:150px;">
+          <div class="modal-header success-icon">
+              <!--<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>-->
+              <img src="images/alert_red_icon.png">
+            </div>
+          <div class="labelforfailure">
+          
+              <label> Alert Message </label>
+          
+          </div>
+        <div class="modal-body">
+          <div class="mainwrappercomment">
+                <div class="mainiinerwrapper">
+                <div class="errormsg">
+                <p style="font-size: 18px !important;"></p>
+                </div>
+                </div>
+        </div> 
+        </div>
+        <div class="btnError">
+        <button class="btn-failure" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!--end popup-->
+
